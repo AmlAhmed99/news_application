@@ -1,0 +1,16 @@
+{
+   "app_title":"الاخبار",
+   "categories": "التصنيفات",
+   "setting":"الاعدادات",
+   "sports" : "الرياضه",
+   "politics":"السياسه",
+   "health":"الصحه",
+   "business":"الاعمال",
+   "environment":"البيئه",
+   "science": "العلوم",
+   "languages": "اللغه",
+   "arabic": "العربيه",
+   "english": "الانجليزيه",
+   "pick": "اختر التصنيف الذي تهتم به",
+   "search": "ابحث عن المقال"
+}

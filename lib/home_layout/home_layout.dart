@@ -3,7 +3,8 @@ import 'package:newsapplication/models/CategoryItemModel.dart';
 import 'package:newsapplication/screens/CategoryDetails.dart';
 import 'package:newsapplication/screens/categories.dart';
 import 'package:newsapplication/screens/searchScreen.dart';
-
+import 'package:newsapplication/screens/settingScreen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HomeScreen extends StatefulWidget {
   static const homeRourte = 'HomeScreenRoute';
 
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(80.0),
               child: AppBar(
-                title: Text('Sports'),
+                title: Text(AppLocalizations.of(context).app_title),
                 actions: [
                   IconButton(
                     icon: Icon(
@@ -60,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'News App',
+                          AppLocalizations.of(context).app_title,
                           textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.headline4,
                         ),
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               size: 36,
                             ),
                             Text(
-                              'Categories',
+                              AppLocalizations.of(context).categories,
                               textAlign: TextAlign.center,
                               style: Theme.of(context).textTheme.headline3,
                             )
@@ -102,13 +103,19 @@ class _HomeScreenState extends State<HomeScreen> {
                               size: 36,
                             ),
                             Text(
-                              'Settings',
+                              AppLocalizations.of(context).setting,
                               textAlign: TextAlign.center,
                               style: Theme.of(context).textTheme.headline3,
                             )
                           ],
                         ),
                       ),
+                      onTap: (){
+                setState(() {});
+                    Navigator.pop(context);
+                Navigator.pushNamed(context, SettingScreen.SettingScreenRourte);
+                               },
+
                     ),
                   ],
                 ),

@@ -2,10 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:newsapplication/api/api_manager.dart';
 import 'package:newsapplication/models/news_response.dart';
-import 'package:newsapplication/models/sources_response.dart';
-import 'package:newsapplication/widgets/category_item.dart';
 import 'package:newsapplication/widgets/news_item_widget.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SearchScreen extends StatefulWidget {
   static const routeNameSearchScreen='routeNameSearchScreen';
 
@@ -52,7 +50,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       ),
                       filled: true,
                       hintStyle: TextStyle(color: Colors.green),
-                      hintText: "Search Article",
+                      hintText:AppLocalizations.of(context).search,
                       fillColor: Colors.white,
                     ),
                   ),
